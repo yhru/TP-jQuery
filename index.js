@@ -1,23 +1,32 @@
-$(document).ready(function () {
+//Animation fade In du formulaire
+function fadeIn() {
     $(".contenu").hide();
     $(".contenu").fadeIn(1337);
-});
+}
 
-$("#age").keyup(function () { //récupérartion de #age
+//TEST
+
+$(document).ready(fadeIn);
+
+//Vérification age
+function mineurMajeur() {
     if (age.value === "") {
         $("#resultatAge").hide();
     }
     else if (age.value < 18 && age.value >= 1) {
         $("#resultatAge").show();
-        $("#resultatAge").text("Vous avez " + age.value + ", vous êtes donc mineur").removeClass("text-success").addClass("text-warning");
+        $("#resultatAge").text("Vous avez " + age.value + "ans, vous êtes donc mineur").removeClass("text-success").addClass("text-warning");
     }
     else {
         $("#resultatAge").show();
         $("#resultatAge").text("Vous avez " + age.value + ", vous êtes donc majeur").removeClass("text-warning").addClass("text-success");
     }
-});
+}
 
-$("input[name=\"mdp\"]").change(function() {
+$("#age").keyup(mineurMajeur);
+
+//Vérification mot de passe 
+function motDePasse() {
     var password1 = password.value;
     var password2 = confirmPassword.value;
 
@@ -31,10 +40,12 @@ $("input[name=\"mdp\"]").change(function() {
         $("#checkPassword").show();
         $("#checkPassword").text("Les deux mots de passes sont identiques").removeClass("text-warning").addClass("text-success");
     }
-});
+}
 
-$("#bouton").click(function () {
+$("input[name=\"mdp\"]").change(motDePasse);
 
+//Forcer à remplir les inputs nécessaires
+function requiredInput() {
     var name = $("#name").val();
     var lastname = $("#lastname").val();
     var age = $("#age").val();
@@ -49,4 +60,5 @@ $("#bouton").click(function () {
         $("#resume").html("Prénom : " + name + "<br>Nom : " + lastname + "<br>Age: " + age + "<br>Pseudo : " + pseudo);
         $("#resume").show();
     }
-});
+}
+$("#bouton").click(requiredInput);
