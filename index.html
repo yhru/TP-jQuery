@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP jQuery #1</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="maNavBar">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <h3>TP jQuery #1</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+
+    <div class="contenu">
+        <h1>jQuery : </h1>
+        <hr>
+        <p>Choisir votre civilité</p>
+        <div class="formulaire">
+            <div>
+                <input type="radio" id="civilite.m" name="civilite">
+                <label for="homme">Homme</label>
+            </div>
+
+            <div>
+                <input type="radio" id="civilite.f" name="civilite">
+                <label for="femme">Femme</label>
+            </div>
+            <div class="form-group">
+                <form method="POST">
+                    <input id="name" type="text" placeholder="Entrez votre prénom" class="form-control">
+                    <input id="lastname" type="text" placeholder="Entrez votre nom" class="form-control">
+                    <input id="age" type="number" placeholder="Entrez votre âge" class="form-control">
+                    <div id="resultatAge">
+                        <!-- Affiche la majorité -->
+                    </div>
+                    <input id="pseudo" type="text" placeholder="Entrez votre pseudo" class="form-control">
+                    <input name="mdp" id="password" type="password" placeholder="Mot de passe" class="form-control">
+                    <input name="mdp" id="confirmPassword" type="password" placeholder="Confirmation mot de passe"
+                        class="form-control">
+                    <div id="checkPassword">
+                        <!-- Affiche les passwords BIEN METTRE UN ID ET PAS UN CLASS-->
+                    </div>
+            </div class="form-control">
+
+            <p id="ErrorMsg"></p>
+            <input name="Ok" id="bouton" type="button" value="Ok" class="btn btn-outline-dark"><br>
+            </form>
+            <br><br>
+            <span id="resume">
+                <!--Affiche le résumé des informations demandés-->
+            </span>
+            <span id="erreurInput">
+                <!--Erreur input-->
+            </span>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="index.js"></script>
+
+</html>

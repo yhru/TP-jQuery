@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+.contenu {
+  background-image: url(./images/papyrus.png);
+  font-family: "Open Sans", sans-serif;
+  padding: 5%;
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+}
+
+.maNavBar{
+  padding: 0%;
+  position: fixed, top;
+}
+
+body{
+  background-image: url(./images/papyrus.png);
+}
+
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+.radio{
+  display: inline-flex;
+}
+
+.form-group {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group input{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
